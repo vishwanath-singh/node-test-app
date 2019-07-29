@@ -4,7 +4,7 @@ const router = express.Router();
 const path = __dirname + '/';
 const currDate = require('./currDate');
 
-// app.use('/static', express.static(__dirname + '/'));
+app.use('/static', express.static(__dirname + '/'));
 
 router.use((req, res, next) => {
   console.log('/' + req.method);
@@ -43,7 +43,7 @@ router.get('/Page2', (req, res) => {
     <p>${currDate.PageTwo()}</p>
     <h3>Page 2</h3>
     <a href="/Page1">Page 1</a>
-   
+   <script src='/static/Date2.js'></script>
   </body>
 </html>`;
 
